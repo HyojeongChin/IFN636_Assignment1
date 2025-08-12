@@ -22,10 +22,10 @@ const addTask = async(req, res)=>{
 
 //Update Task
 const updateTask=async(req,res)=>{
-    const{ title, description, complete, deadline}= req.body;
+    const{ title, description, completed, deadline}= req.body;
     try{
         const task = await Task.findById(req.params.id);
-        if(!task)return rawListeners.status(404).json({message:'Task not found'});
+        if(!task)return res.status(404).json({message:'Task not found'});
 
         task.title = title || task.title;
         task.description = description || task.description;
