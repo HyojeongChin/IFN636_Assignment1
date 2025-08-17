@@ -35,3 +35,4 @@ export default function MyPass() {
     </div>
   );
 }
+"// DEPG-5: render QR + pass status" 
