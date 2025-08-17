@@ -178,6 +178,6 @@ const softDeleteLog = async (req, res, next) => {
 };
 
 module.exports = { 
-    checkIn, getByEvent, updateStatus, deleteAttendance, scan, summary, editLog, softDeleteLog
+    checkIn, getByEvent, updateStatus, deleteAttendance, scan, summary, editLog, softDeleteLog, scanPass
 };
 

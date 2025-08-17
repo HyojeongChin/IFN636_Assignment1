@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <Link to="/events/register" className="text-2xl font-bold">Your apps name</Link>
+      <Link to="/events/register" className="text-2xl font-bold">Digital Event Generator Pass</Link>
       
       <div className = "flex items-center gap-4">
         {isAuthed ? (

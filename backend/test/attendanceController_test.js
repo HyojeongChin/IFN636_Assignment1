@@ -4,7 +4,7 @@ const chai = require('chai');
 const sinon = require('sinon');
 const mongoose = require('mongoose');
 
-const Event = require('../models/Event'); // Import Event model
+const Pass = require('../models/Pass'); // Import Event model
 const Attendance = require('../models/Attendance')
 const { scanPass } = require('../controllers/attendanceController'); // Import function
 const { expect } = chai;
@@ -15,10 +15,10 @@ describe('Attendance Controller - scanPass', () => {
     it('should grant entry for a valid, unused pass and log attendance', async () => {
     const req = {
     user: { id: new mongoose.Types.ObjectId(), role: 'staff' },
-    body: { qrPayload: 'QR:abcd' },
+    body: { qrToken: 'QR:abcd' },
     };
 
-    const eventDoc = { 
+    const passDoc = { 
         _id: new mongoose.Types.ObjectId(), 
         status: 'active',
         usedAt: null,
@@ -34,7 +34,7 @@ describe('Attendance Controller - scanPass', () => {
 //        createdAt: new Date(),
 //    }
 
-    const findOneStub = sinon.stub(Event, 'findOne').resolves(eventDoc);
+    const findOneStub = sinon.stub(Pass, 'findOne').resolves(passDoc);
     sinon.stub(Attendance, 'create').resolves({});
 
     const res = {
@@ -55,7 +55,7 @@ describe('Attendance Controller - scanPass', () => {
 
     const req = {
         user: { id: new mongoose.Types.ObjectId(), role: 'staff' },
-        body: { qrPayload: 'QR:abcd' }
+        body: { qrToken: 'QR:abcd' }
     };
 
     sinon.stub(Event, 'findOne').rejects(new Error('DB Error'));

@@ -24,8 +24,10 @@
     "chai": "^5.2.1",
     "esm": "^3.2.25",
     "mocha": "^11.7.1",
+    "mongodb-memory-server": "^10.2.0",
     "nodemon": "^2.0.15",
-    "sinon": "^19.0.5"
+    "sinon": "^19.0.5",
+    "supertest": "^7.1.4"
   },
   "author": "Task Manager Team",
   "license": "ISC"
