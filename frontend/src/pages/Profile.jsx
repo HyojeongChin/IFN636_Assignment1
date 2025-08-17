@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import axiosInstance from '../axiosConfig';
+import axiosInstance, { authHeader } from '../axiosConfig';
 
 const Profile = () => {
   const { user } = useAuth(); // Access user token from context
@@ -18,7 +18,7 @@ const Profile = () => {
       setLoading(true);
       try {
         const response = await axiosInstance.get('/api/auth/profile', {
-          headers: { Authorization: `Bearer ${user.token}` },
+          headers: authHeader()
         });
         setFormData({
           name: response.data.name,
@@ -41,7 +41,7 @@ const Profile = () => {
     setLoading(true);
     try {
       await axiosInstance.put('/api/auth/profile', formData, {
-        headers: { Authorization: `Bearer ${user.token}` },
+        headers: authHeader(),
       });
       alert('Profile updated successfully!');
     } catch (error) {

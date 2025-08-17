@@ -1,0 +1,14 @@
+﻿{
+    "pass":  {
+                 "_id":  "68a0297d80f80a3c70d354f8",
+                 "eventId":  "68a0297d80f80a3c70d354f4",
+                 "userId":  "689f86d7b9583042ca389d5b",
+                 "qrToken":  "e9fc9176-1714-474d-b639-e752fe26ea50",
+                 "status":  "active",
+                 "version":  2,
+                 "createdAt":  "2025-08-16T06:47:25.216Z",
+                 "updatedAt":  "2025-08-16T06:47:26.686Z",
+                 "__v":  0
+             },
+    "qrData":  "e9fc9176-1714-474d-b639-e752fe26ea50"
+}

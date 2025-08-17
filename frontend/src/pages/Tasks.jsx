@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axiosInstance from '../axiosConfig';
+import axiosInstance, { authHeader } from '../axiosConfig';
 import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
 import { useAuth } from '../context/AuthContext';
@@ -13,7 +13,7 @@ const Tasks = () => {
     const fetchTasks = async () => {
       try {
         const response = await axiosInstance.get('/api/tasks', {
-          headers: { Authorization: `Bearer ${user.token}` },
+          headers: authHeader()
         });
         setTasks(response.data);
       } catch (error) {

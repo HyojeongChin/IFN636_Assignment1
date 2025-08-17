@@ -1,0 +1,14 @@
+﻿{
+    "_id":  "68a0297e033f5f8840ce288c",
+    "eventId":  "68a0297d80f80a3c70d354f4",
+    "userId":  "689f86d7b9583042ca389d5b",
+    "status":  "checked-in",
+    "scannedAt":  "2025-08-16T06:47:26.860Z",
+    "deleted":  false,
+    "audit":  [
+
+              ],
+    "createdAt":  "2025-08-16T06:47:26.865Z",
+    "updatedAt":  "2025-08-16T06:47:29.005Z",
+    "__v":  0
+}

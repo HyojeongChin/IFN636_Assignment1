@@ -10,8 +10,13 @@
   "devDependencies": {
     "chai": "^5.1.2",
     "concurrently": "^7.0.0",
+    "http-proxy-middleware": "^2.0.9",
     "mocha": "^11.0.1"
   },
   "author": "Task Manager Team",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@yudiel/react-qr-scanner": "^2.3.1",
+    "react-qr-code": "^2.0.18"
+  }
 }
