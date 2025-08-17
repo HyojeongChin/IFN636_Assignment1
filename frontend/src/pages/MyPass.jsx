@@ -36,3 +36,4 @@ export default function MyPass() {
   );
 }
 "// DEPG-5: render QR + pass status" 
+"// DEPG-5: render QR + pass status" 
