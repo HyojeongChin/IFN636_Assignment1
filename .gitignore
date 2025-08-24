@@ -32,4 +32,5 @@ frontend/.env
 git checkout -b feature/DEPG-5-registration
 git add .
 git commit -m "DEPG-4: Implement registration API & QR pass generation"
-git push -u origin feature/DEPG-4-registration
+git push -u origin feature/DEPG-4-registration*.docx
+*.pem
